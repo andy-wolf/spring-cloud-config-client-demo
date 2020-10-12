@@ -1,0 +1,20 @@
+# =====================================
+# Actuator
+# =====================================
+logging:
+  level:
+    org.springframework.cloud.config.client: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: always
+
+my:
+  test:
+    key: Test
