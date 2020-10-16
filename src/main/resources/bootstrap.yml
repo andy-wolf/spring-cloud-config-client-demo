@@ -1,6 +1,12 @@
+---
+encrypt:
+  key: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 spring:
   application:
-    name: station1
+    name: app2
+  main:
+    web-application-type: NONE
   cloud:
     config:
       uri: http://localhost:8888

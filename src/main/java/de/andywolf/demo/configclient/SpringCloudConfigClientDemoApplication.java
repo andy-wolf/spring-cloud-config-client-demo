@@ -10,14 +10,26 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringCloudConfigClientDemoApplication implements CommandLineRunner {
 
-    @Value("${my.test.key}")
+    @Value("${my.local.test.key}")
     private String myTestKey;
 
-    //@Value("${environment}")
-    //private String myEnvironment;
+    @Value("${app.name}")
+    private String myAppName;
 
-    @Value("${rate}")
-    private String rate;
+    @Value("${environment}")
+    private String myEnvironment;
+
+    @Value("${db.name}")
+    private String myDbName;
+
+    @Value("${db.username}")
+    private String myDbUsername;
+
+    @Value("${db.password}")
+    private String myDbPassword;
+
+    @Value("${db.url}")
+    private String myDbURL;
 
     public static void main(String[] args) {
         SpringApplication.run(SpringCloudConfigClientDemoApplication.class, args);
@@ -25,7 +37,13 @@ public class SpringCloudConfigClientDemoApplication implements CommandLineRunner
 
     @Override
     public void run(String... args) throws Exception {
-        log.info("My Test Key: " + myTestKey);
-        log.info("Rate: " + rate);
+        log.info("My local test key: " + myTestKey);
+        log.info("App Name: " + myAppName);
+        log.info("Environment: " + myEnvironment);
+        log.info("Database Name: " + myDbName);
+        log.info("DB Username: " + myDbUsername);
+        log.info("DB Password: " + myDbPassword);
+        log.info("DB URL: " + myDbURL);
+
     }
 }

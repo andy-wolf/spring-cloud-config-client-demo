@@ -1,4 +1,4 @@
 my:
   local:
     test:
-      key: Test-dev
+      key: Test-prod

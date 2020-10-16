@@ -16,5 +16,6 @@ management:
       show-details: always
 
 my:
-  test:
-    key: Test
+  local:
+    test:
+      key: Test
